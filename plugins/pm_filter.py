@@ -292,7 +292,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('request', url='https://t.me/Reqqqseries_bot')
                 ]
                 ]
-            await query.message.edit(text="Cara Menggunakan Bot Ini\n\n1.Kirim Saya Judul Film Atau Series\n'(example for Movie:Turning Red 1080p|Encanto x264| Turning Red DUB)\n(example for series:HellBound S01E04)'\n\n**Kata Kunci Yang Bisa Di pakai**\n(Tahun Rilis|Encode x265-x264|DUB|Season Atau Episode=S01E02|Resolusi)", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text)"**Cara Menggunakan Bot\nKirim Judul Film & Series Dengan Format Seperti Di bawah**\n\n**Contoh:**Resolusi:(Turning Red 1080p)\nEncode:(Turning Red x265)\nTipe:(Turning Red DUB)\nSeason:(Hellbound S01)\nEpisode:(Hellbound E04)\nSeason & Episode:(Hellbound S01E04)\n\n**Format Yang Tersedia:**\nResolusi: 720p,1080p\nEncode:x264,x265\nTipe:DUB,HARDSUB,DualAudio\n\n**Jika Yang Dicari Tidak Ada Silahkan Request Dibawah👇**"
+,reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True) 
 
 
 

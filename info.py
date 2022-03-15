@@ -29,8 +29,8 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 default_start_msg = """
-**Hi, saya Bot Pencari Film/Series atau Anda dapat memanggil saya sebagai Movie Sharing Bot**
-Di sini Anda dapat mencari file dalam mode Inline serta PM, Gunakan tombol di bawah ini untuk mencari Film/Series atau kirimkan saya Judul Film/Series untuk mencariny Di Database.
+**Hi, saya Bot Pencari Film/Series**\n\n
+**Di sini Anda dapat mencari file dalam mode Inline serta PM.**\n\nBerikan Saja Saya judul Film Atau Series Dan saya Akan Mencarinya DiDatabase.
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
 
