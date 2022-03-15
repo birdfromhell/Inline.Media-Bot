@@ -208,7 +208,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer the request again.",show_alert=True)
+                await query.answer("Anda menggunakan ini untuk salah satu pesan lama saya, silakan kirim permintaan lagi.",show_alert=True)
                 return
 
             if int(index) == int(data["total"]) - 2:
