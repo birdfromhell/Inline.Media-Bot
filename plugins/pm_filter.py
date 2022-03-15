@@ -1,4 +1,4 @@
-#Kanged From @TroJanZheX
+#Kanged From
 from info import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS, BUTTON
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
@@ -59,7 +59,7 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='CAADBQADMwIAAtbcmFelnLaGAZhgBwI')
+            await client.send_sticker(chat_id=message.from_user.id, sticker='CAACAgUAAxkBAAEEELFiMBeqRzACx_8GVxeUxBY-Xq9gAwAChAADoHp3JsUEnEMhze-jHgQ')
             return
 
         if not btn:
@@ -83,10 +83,10 @@ async def filter(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Inilah Yang Saya Temukan Di Database Saya Dari KataKunci {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
             else:
-                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>Inilah Yang Saya Temukan Di Database Saya Dari KataKunci {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -106,7 +106,7 @@ async def filter(client, message):
         if poster:
             await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Inilah Yang Saya Temukan Di Database Saya Dari KataKunci {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.group & filters.incoming)
 async def group(client, message):
@@ -151,9 +151,9 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Inilah Yang Saya Temukan Di Database Saya Dari Kata Kunci {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>Inilah Yang Saya Temukan Di Database Saya Dari Kata Kunci {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -171,9 +171,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>Inilah Yang Saya Temukan Di Database Saya Dari Kata Kunci {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Inilah Yang Saya Temukan Di Database Saya Dari Kata Kunci {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
@@ -208,7 +208,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("You are using this for one of my old message, please send the request again.",show_alert=True)
+                await query.answer the request again.",show_alert=True)
                 return
 
             if int(index) == int(data["total"]) - 2:
@@ -250,7 +250,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("You are using this for one of my old message, please send the request again.",show_alert=True)
+                await query.answer("Anda menggunakan ini untuk salah satu pesan lama saya, silakan kirim permintaan lagi.",show_alert=True)
                 return
 
             if int(index) == 1:
@@ -288,11 +288,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='https://t.me/subin_works'),
-                    InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
+                    InlineKeyboardButton('Update Channel', url='https://t.me/MoviesharingbotUpdate'),
+                    InlineKeyboardButton('request', url='https://t.me/Reqqqseries_bot')
                 ]
                 ]
-            await query.message.edit(text="Source Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text="Cara Menggunakan Bot Ini\n\n1.Kirim Saya Judul Film Atau Series\n'(example for Movie:Turning Red 1080p|Encanto x264| Turning Red DUB)\n(example for series:HellBound S01E04)'\n\n**Kata Kunci Yang Bisa Di pakai**\n(Tahun Rilis|Encode x265-x264|DUB|Season Atau Episode=S01E02|Resolusi)", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
 
@@ -313,8 +313,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        InlineKeyboardButton('request', url='https://t.me/Reqqqseries_bot'),
+                        InlineKeyboardButton('Update Channel', url='https://t.me/MoviesharingbotUpdate')
                     ]
                     ]
                 
@@ -345,8 +345,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        InlineKeyboardButton('request', url='https://t.me/Reqqqseries_bot'),
+                        InlineKeyboardButton('Update Channel', url='https://t.me/MoviesharingbotUpdate')
                     ]
                     ]
                 
