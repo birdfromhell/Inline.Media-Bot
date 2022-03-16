@@ -34,7 +34,7 @@ default_start_msg = """
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
 
-BUTTON = environ.get("BUTTON",False)
+BUTTON = environ.get("BUTTON",True)
 FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
 OMDB_API_KEY = environ.get("OMDB_API_KEY", "")
 if FILE_CAPTION.strip() == "":
